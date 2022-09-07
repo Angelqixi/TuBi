@@ -54,7 +54,7 @@ def t00ls_login(u_name, u_pass, q_num, q_ans):
         'questionid': q_num,
         'answer': q_ans
     }
-    response_login = requests.post('https://www.t00ls.cc/login.json', data=login_data, headers=req_headers)
+    response_login = requests.post('https://www.t00ls.com/login.json', data=login_data, headers=req_headers)
     response_login_json = json.loads(response_login.text)
 
     if response_login_json['status'] != 'success':
