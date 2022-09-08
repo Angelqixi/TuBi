@@ -30,13 +30,14 @@ crontab -e
 编辑定时任务，一行一个任务，本次填写的内容如下：
 
 ```bash
-30 9 * * * /usr/bin/python3 /root/code/t00ls/TuBi.py>&1
+30 9 * * * cd /usr/local/python3/bin/; python3 /root/Desktop/TuBi.py>&1
 ```
 
-表示每天 9:30 自动运行下面的命令：
+表示每天 9:30 自动运行下面的命令： 先cd跳转到/usr/local/python3/bin/目录下，通过python3 运行 /root/Desktop/下的TuBi.py脚本。
+（在这的话因为crontab的函数比较呆，可能你在shell环境下能运行的路径，到crontab下的话可能会报错，所以我跳了个点，分开运行。）
 
 ````bash
-/usr/bin/python3 /root/code/t00ls/TuBi.py
+cd /usr/local/python3/bin/; python3 /root/Desktop/TuBi.py>&1
 ````
 
 这样看起来是不是很简单呢，如果语法没有问题的话，wq退出保存之后会自动弹窗如下提示：
