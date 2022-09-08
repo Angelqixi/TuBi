@@ -37,7 +37,7 @@ crontab -e
 （在这的话因为crontab的函数比较呆，可能你在shell环境下能运行的路径，到crontab下的话可能会报错，所以我跳了个点，分开运行。）
 
 ````bash
-cd /usr/local/python3/bin/; python3 /root/Desktop/TuBi.py>&1
+30 9 * * * cd /usr/local/python3/bin/; python3 /root/Desktop/TuBi.py>&1
 ````
 
 这样看起来是不是很简单呢，如果语法没有问题的话，wq退出保存之后会自动弹窗如下提示：
